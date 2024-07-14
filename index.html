@@ -25,9 +25,11 @@
             Paulo Oliveira
           </a>
         </p>
-        <button id="theme-toggle">
-          <ion-icon name="caret-forward-circle-outline"></ion-icon>
-        </button>
+        <div id="theme-toggle-container">
+          <button id="theme-toggle">
+            <ion-icon name="contrast-outline"></ion-icon>
+          </button>
+        </div>
       </div>
       <div class="link">
         <a href="https://www.linkedin.com/in/paulo-doliveira/" target="_blank">
@@ -77,14 +79,14 @@
         .addEventListener("click", function () {
           const root = document.documentElement
           root.classList.toggle("light")
-
-          const themeToggle = document.getElementById("theme-toggle")
-          const icon = themeToggle.querySelector("ion-icon")
+          const toggleContainer = document.getElementById(
+            "theme-toggle-container"
+          )
 
           if (root.classList.contains("light")) {
-            icon.setAttribute("name", "caret-back-outline")
+            toggleContainer.classList.add("light")
           } else {
-            icon.setAttribute("name", "caret-forward-circle-outline")
+            toggleContainer.classList.remove("light")
           }
         })
     </script>

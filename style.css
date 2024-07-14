@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Variáveis de tema */
+/* Versão Black */
 :root {
   --text-color: white;
   --bg-color: #2f2c3b; /* Fundo roxo escuro */
@@ -17,7 +17,7 @@
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
-/* Estilos para tema claro */
+/* Versão light */
 .light {
   --text-color: black;
   --bg-color: #f0f0f0; /* Fundo cinza claro para o tema claro */
@@ -47,6 +47,7 @@ body * {
   padding: 0 24px;
 }
 
+/* Profile */
 #profile {
   text-align: center;
   padding: 24px;
@@ -62,23 +63,48 @@ body * {
   margin-top: 8px;
 }
 
-#profile button {
-  margin-top: 16px; /* Adiciona espaçamento entre o nome e o botão */
-  padding: 8px 16px;
-  font-size: 16px;
+#theme-toggle-container {
+  position: relative;
+  width: 100px;
+  height: 50px;
   background-color: var(--surface-color);
-  color: var(--text-color);
   border: 1px solid var(--stroke-color);
-  border-radius: 4px;
+  border-radius: 25px;
+  margin: 0 auto 16px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-#profile button:hover {
+#theme-toggle-container.light {
   background-color: var(--highlight-color);
+}
+
+#theme-toggle {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: left 0.3s;
+}
+
+#theme-toggle-container.light #theme-toggle {
+  left: 55px;
+}
+
+#theme-toggle ion-icon {
+  font-size: 24px;
   color: var(--text-color);
 }
 
+/*links */
 .link {
   border: 1px solid #ccc; /* Borda cinza claro */
   background-color: var(
