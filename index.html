@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- Carrega as fontes Inter do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <!-- Configurações básicas da página -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PrimeiroProjeto</title>
+    <!-- Importa o arquivo de estilo CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="container">
+      <!-- Perfil -->
       <div id="profile">
         <img src="./assets/avatar.png" alt="Foto Paulo Oliveira" />
         <p>
-          <a
-            href="https://www.linkedin.com/in/paulo-doliveira/"
-            target="_blank"
+          <!-- Link para o LinkedIn -->
+          <a href="https://www.linkedin.com/in/paulo-doliveira/" target="_blank"
+            >Paulo Oliveira</a
           >
-            Paulo Oliveira
-          </a>
         </p>
+        <!-- Container para o botão de alternar tema -->
         <div id="theme-toggle-container">
           <button id="theme-toggle">
             <ion-icon name="contrast-outline"></ion-icon>
           </button>
         </div>
       </div>
+      <!-- Links para redes sociais e outros -->
       <div class="link">
         <a href="https://www.linkedin.com/in/paulo-doliveira/" target="_blank">
           <ion-icon name="logo-linkedin"></ion-icon> Acesse meu Linkedin
@@ -58,6 +62,7 @@
           programar
         </a>
       </div>
+      <!-- Rodapé -->
       <footer>
         Desenvolvido por
         <a href="https://github.com/PauloOliveira78/Link_Na_Bio"
@@ -65,6 +70,7 @@
         >
       </footer>
     </div>
+    <!-- Script para carregar os ícones Ionicons -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -73,6 +79,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <!-- Script para alternar entre os temas -->
     <script>
       document
         .getElementById("theme-toggle")
@@ -83,6 +90,7 @@
             "theme-toggle-container"
           )
 
+          // Adiciona a classe 'light' ao container de toggle se o tema estiver claro
           if (root.classList.contains("light")) {
             toggleContainer.classList.add("light")
           } else {
