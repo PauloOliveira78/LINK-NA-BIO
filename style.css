@@ -9,7 +9,8 @@
 :root {
   --text-color: white;
   --bg-color: #2f2c3b; /* Fundo roxo escuro */
-  --bg-image: url("./assets/bg-mobile.jpg");
+  --bg-image-mobile: url("./assets/bg-mobile.jpg");
+  --bg-image-desktop: url("./assets/bg-desktop.jpg");
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --stroke-color-hover: rgba(255, 255, 255, 0.2);
@@ -20,7 +21,8 @@
 .light {
   --text-color: black;
   --bg-color: #f0f0f0; /* Fundo cinza claro para o tema claro */
-  --bg-image: url("./assets/bg-mobile-light.jpg");
+  --bg-image-mobile: url("./assets/bg-mobile-light.jpg");
+  --bg-image-desktop: url("./assets/bg-desktop-light.jpg");
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.1);
   --stroke-color-hover: rgba(0, 0, 0, 0.2);
@@ -31,10 +33,19 @@
 /* Estilos gerais */
 body {
   background-color: var(--bg-color); /* Fundo da página */
-  background-image: var(--bg-image); /* Imagem de fundo */
+  background-image: var(
+    --bg-image-mobile
+  ); /* Imagem de fundo padrão para mobile */
   background-size: cover; /* Ajusta para cobrir a tela inteira */
   font-family: "Inter", sans-serif; /* Fonte padrão */
   color: var(--text-color); /* Cor do texto */
+}
+
+/* Ajusta a imagem de fundo para desktop */
+@media (min-width: 768px) {
+  body {
+    background-image: var(--bg-image-desktop);
+  }
 }
 
 body * {
