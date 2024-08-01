@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crie seu evento</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+      emailjs.init('DY-DI2iS3eumciqw8'); // Inicializa EmailJS com a Public Key
+  </script>
+</head>
+<body class="bg-gradient-to-r from-green-400 to-blue-500">
+  <div class="container mx-auto px-4 py-10">
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-white">Algum problema?</h1>
+      <p class="text-lg text-white">Entraremos em contato o mais breve possível</p>
+    </header>
+    <form id="my-form" class="bg-white p-6 rounded-lg shadow-lg">
+      <fieldset>
+        <div class="mb-4">
+          <p class="mb-4 text-lg font-semibold">Fale sobre você, contato e sua empresa</p>
+
+          <div class="mb-4">
+            <label for="first-name" class="block text-gray-700">Nome</label>
+            <input type="text" id="first-name" name="first_name" required minlength="3" maxlength="16" class="w-full px-3 py-2 border rounded-md"/>
+          </div>
+
+          <div class="mb-4">
+            <label for="last-name" class="block text-gray-700">Sobrenome</label>
+            <input type="text" id="last-name" name="last_name" required minlength="4" maxlength="16" class="w-full px-3 py-2 border rounded-md"/>
+          </div>
+         
+          <div class="mb-4">
+            <label for="event-email" class="block text-gray-700">E-mail <span>(Ex: nome@dominio.com)</span></label>
+            <input type="email" id="event-email" name="event_email" required class="w-full px-3 py-2 border rounded-md"/>
+          </div>
+         
+          <div class="mb-4">
+            <label for="event-link" class="block text-gray-700">Site da sua empresa <span>(opcional)</span></label>
+            <input type="url" id="event-link" name="event_link" class="w-full px-3 py-2 border rounded-md" placeholder="Exemplo: https://empresa.com"/>
+        </div>
+
+          <div class="mb-4">
+            <label for="event-whatsapp" class="block text-gray-700">Whatsapp para contato <span>(somente números)</span></label>
+            <input type="text" id="event-whatsapp" name="event_whatsapp" pattern="\d{10,11}" minlength="10" maxlength="11" class="w-full px-3 py-2 border rounded-md" title="O número deve ter entre 10 e 11 dígitos" placeholder="(DD) 0000000-0000"/>
+          </div>
+
+          <div class="mb-4">
+            <label for="event-category" class="block text-gray-700">Categoria</label>
+            <select id="event-category" name="event_category" class="w-full px-3 py-2 border rounded-md">
+              <option value="support">Suporte</option>
+              <option value="support2">Visita Presencial</option>
+              <option value="hardware">Lentidão de Computadores</option>
+              <option value="network">Redes e Infraestrutura</option>
+              <option value="websites">Desenvolvimento de Sites</option>
+              <option value="Dev">Desenvolvimento de Sistemas</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="event-info" class="block text-gray-700">Descreva o problema <span>(máximo 1200 caracteres)</span></label>
+            <textarea id="event-info" name="event_info" required maxlength="1200" class="w-full px-3 py-2 border rounded-md h-32"></textarea>
+          </div>
+        
+        </div>
+        <footer class="mt-6 text-center">
+          <button type="submit" class="bg-green-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-green-600 transition duration-300">Enviar solicitação</button>
+        </footer>
+      </fieldset>
+    </form>
+    <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-md shadow-lg opacity-0 visibility-hidden transition-opacity duration-500" id="confirmationMessage">
+      Chamado aberto com sucesso, aguarde retorno!
+    </div>
+  </div>
+  <script src="form.js"></script>
+</body>
+</html>
