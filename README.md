@@ -32,6 +32,3 @@ Além deste projeto, também estou participando ativamente de iniciativas na com
 
 - **Paulo Oliveira** - [@PauloOliveira78](https://github.com/PauloOliveira78)
 
-## Licença
-
-Este projeto é licenciado sob a Licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
