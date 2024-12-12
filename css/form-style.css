@@ -1,0 +1,277 @@
+/* Remove margens e paddings padrão e define box-sizing para border-box para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Gerais */
+/* Define a fonte padrão para o corpo, inputs, selects e textareas */
+body,
+input,
+select,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Define a cor de fundo padrão do corpo */
+body {
+  background: linear-gradient(
+    to bottom,
+    #0d1117,
+    #161b22
+  ); /* Gradiente de preto */
+  color: #586069; /* Texto em cinza escuro */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Define a largura da página e centraliza o conteúdo */
+.page {
+  width: 100%;
+  max-width: 736px;
+  margin: auto;
+  flex: 1;
+  padding: 0 16px;
+}
+
+/* Cabeçalho */
+/* Define a largura e a margem superior do cabeçalho */
+header {
+  width: 100%;
+  margin-top: 74px;
+  text-align: center;
+}
+
+/* Estiliza o título do cabeçalho */
+header h1 {
+  font-family: "Archivo", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: #c9d1d9; /* Cinza claro */
+  margin-bottom: 24px;
+}
+
+/* Estiliza o parágrafo do cabeçalho */
+header p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #c9d1d9; /* Cinza claro */
+}
+
+/* Formulário */
+/* Define o estilo geral do formulário */
+form {
+  margin-top: 38px;
+  background: #161b22;
+  border-radius: 8px 8px 0 0;
+  min-height: 300px;
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao formulário */
+}
+
+/* Remove a borda padrão dos fieldsets */
+fieldset {
+  border: none;
+}
+
+/* Define o layout dos fieldsets */
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Estiliza a legenda dos fieldsets */
+fieldset legend {
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  width: 100%;
+  border-bottom: 1px solid #30363d; /* Cinza escuro */
+  padding-bottom: 16px;
+  color: #c9d1d9; /* Cinza claro */
+}
+
+/* Define o layout dos wrappers de input */
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estiliza os labels dos inputs e checkboxes */
+.input-wrapper label,
+.checkbox-wrapper label {
+  font-size: 14px;
+  line-height: 24px;
+  color: #c9d1d9; /* Cinza claro */
+  margin-bottom: 8px;
+}
+
+/* Estiliza os spans dentro dos labels */
+.input-wrapper label span {
+  margin-left: 12px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #8b949e;
+}
+
+/* Estiliza os spans ao passar o mouse */
+.input-wrapper label span:hover {
+  color: #c9d1d9;
+}
+
+/* Estiliza os inputs, textareas e selects */
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper select {
+  background: #30363d;
+  border: 1px solid #30363d; /* Cinza escuro */
+  border-radius: 8px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #c9d1d9; /* Cinza claro */
+}
+
+/* Define a altura dos textareas */
+.input-wrapper textarea {
+  padding: 0;
+  height: 168px;
+}
+
+/* Estiliza os selects */
+.input-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 24px top 50%;
+}
+
+/* Colunas */
+/* Define o layout das colunas */
+.col-3 {
+  display: flex;
+  gap: 20px;
+}
+
+/* Define a largura do primeiro filho das colunas */
+.col-3 > div:nth-child(1) {
+  width: 100%;
+}
+
+/* Checkbox */
+/* Define a posição relativa dos wrappers de checkbox */
+.checkbox-wrapper {
+  position: relative;
+}
+
+/* Estiliza os labels dos checkboxes */
+.checkbox-wrapper label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+
+/* Define a posição e a opacidade dos inputs de checkbox */
+.checkbox-wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+}
+
+/* Estiliza o pseudo-elemento antes dos labels dos checkboxes */
+.checkbox-wrapper label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  border: 1px solid #30363d; /* Cinza escuro */
+  border-radius: 8px;
+}
+
+/* Estiliza o pseudo-elemento antes dos labels dos checkboxes quando o checkbox está marcado */
+.checkbox-wrapper input:checked + label::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.00016 16.1698L4.83016 11.9998L3.41016 13.4098L9.00016 18.9998L21.0002 6.99984L19.5902 5.58984L9.00016 16.1698Z' fill='%2342D3FF'/%3E%3C/svg%3E%0A");
+}
+
+/* Estiliza o pseudo-elemento antes dos labels dos checkboxes quando o checkbox está focado */
+.checkbox-wrapper input:focus + label::before {
+  outline: 2px solid black;
+}
+
+/* Rodapé */
+/* Define o estilo geral do rodapé */
+footer {
+  background: #161b22; /* Preto mais claro */
+  padding: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff; /* Branco */
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Estiliza o link no rodapé */
+footer a {
+  color: #ffffff; /* Branco */
+  text-decoration: none;
+}
+
+/* Estiliza o botão no rodapé */
+footer .button {
+  height: 56px;
+  background: #10b981; /* Verde gamer */
+  border: 0;
+  border-radius: 8px;
+  font-family: "Archivo";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+}
+
+/* Estiliza o botão no rodapé ao passar o mouse */
+footer .button:hover {
+  background: #059669; /* Verde gamer mais escuro */
+}
+
+/* Estilo para inputs inválidos */
+/* Estiliza os inputs quando estão inválidos */
+input:invalid {
+  border: 1px solid #30363d; /* Muda a borda para a mesma cor dos outros inputs */
+}
+
+/* Mensagem de Confirmação */
+/* Define o estilo da mensagem de confirmação */
+#confirmationMessage {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #10b981; /* Verde gamer */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Estiliza a mensagem de confirmação quando está visível */
+#confirmationMessage.show {
+  opacity: 1;
+  visibility: visible;
+}
