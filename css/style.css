@@ -9,25 +9,25 @@
 :root {
   --text-color: white;
   --bg-color: #2f2c3b; /* Fundo roxo escuro */
-  --bg-image-mobile: url("./assets/bg-mobile.jpg");
-  --bg-image-desktop: url("./assets/bg-desktop.jpg");
+  --bg-image-mobile: url("../assets/bg-mobile.jpg");
+  --bg-image-desktop: url("../assets/bg-desktop.jpg");
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --stroke-color-hover: rgba(255, 255, 255, 0.2);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(./assets/moon-stars.svg);
+  --switch-bg-url: url(../assets/moon-stars.svg);
 }
 
 .light {
   --text-color: black;
   --bg-color: #f0f0f0; /* Fundo cinza claro para o tema claro */
-  --bg-image-mobile: url("./assets/bg-mobile-light.jpg");
-  --bg-image-desktop: url("./assets/bg-desktop-light.jpg");
+  --bg-image-mobile: url("../assets/bg-mobile-light.jpg");
+  --bg-image-desktop: url("../assets/bg-desktop-light.jpg");
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.1);
   --stroke-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg);
+  --switch-bg-url: url(../assets/sun.svg);
 }
 
 /* Estilos gerais */
@@ -110,7 +110,7 @@ body * {
 }
 
 /* Posição do botão de alternar tema para o tema claro */
-#theme-toggle-container.light #theme-toggle {
+.light #theme-toggle {
   left: 55px; /* Posição à esquerda para o tema claro */
 }
 
