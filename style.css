@@ -1,0 +1,169 @@
+/* Reset padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definições de cores e imagens para temas Black e Light */
+:root {
+  --text-color: white;
+  --bg-color: #2f2c3b; /* Fundo roxo escuro */
+  --bg-image-mobile: url("./assets/bg-mobile.jpg");
+  --bg-image-desktop: url("./assets/bg-desktop.jpg");
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --stroke-color-hover: rgba(255, 255, 255, 0.2);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-color: #f0f0f0; /* Fundo cinza claro para o tema claro */
+  --bg-image-mobile: url("./assets/bg-mobile-light.jpg");
+  --bg-image-desktop: url("./assets/bg-desktop-light.jpg");
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --stroke-color-hover: rgba(0, 0, 0, 0.2);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
+/* Estilos gerais */
+body {
+  background-color: var(--bg-color); /* Fundo da página */
+  background-image: var(
+    --bg-image-mobile
+  ); /* Imagem de fundo padrão para mobile */
+  background-size: cover; /* Ajusta para cobrir a tela inteira */
+  font-family: "Inter", sans-serif; /* Fonte padrão */
+  color: var(--text-color); /* Cor do texto */
+}
+
+/* Ajusta a imagem de fundo para desktop */
+@media (min-width: 768px) {
+  body {
+    background-image: var(--bg-image-desktop);
+  }
+}
+
+body * {
+  font-family: "Inter", sans-serif; /* Fonte para todos os elementos */
+  color: var(--text-color); /* Cor do texto para todos os elementos */
+}
+
+#container {
+  max-width: 600px; /* Largura máxima do container */
+  margin: 56px auto 0px; /* Centraliza o container na página */
+  padding: 0 24px; /* Espaçamento interno */
+}
+
+/* Estilos para o perfil */
+#profile {
+  text-align: center; /* Centraliza o conteúdo */
+  padding: 24px; /* Espaçamento interno */
+}
+
+#profile img {
+  width: 112px; /* Tamanho da imagem de perfil */
+}
+
+#profile p {
+  font-weight: 500; /* Peso da fonte */
+  line-height: 24px; /* Altura da linha */
+  margin-top: 8px; /* Espaçamento acima do parágrafo */
+}
+
+/* Estilos para o botão de alternar tema */
+#theme-toggle-container {
+  position: relative; /* Posição relativa */
+  width: 100px; /* Largura do container do botão */
+  height: 50px; /* Altura do container do botão */
+  background-color: var(--surface-color); /* Cor de fundo */
+  border: 1px solid var(--stroke-color); /* Borda */
+  border-radius: 25px; /* Borda arredondada */
+  margin: 0 auto 16px; /* Centraliza e adiciona margem inferior */
+  cursor: pointer; /* Cursor pointer */
+  transition: background-color 0.3s, border-color 0.3s; /* Transições suaves */
+}
+
+/* Estilos para o tema claro */
+#theme-toggle-container.light {
+  background-color: var(--highlight-color); /* Cor de fundo para tema claro */
+}
+
+#theme-toggle {
+  position: absolute; /* Posição absoluta */
+  top: 5px; /* Posicionamento do topo */
+  left: 5px; /* Posicionamento da esquerda */
+  width: 40px; /* Largura do botão */
+  height: 40px; /* Altura do botão */
+  background-color: white; /* Cor de fundo */
+  border-radius: 50%; /* Borda arredondada */
+  border: none; /* Sem borda */
+  outline: none; /* Sem contorno */
+  display: flex; /* Display flex para centralizar conteúdo */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Alinha horizontalmente ao centro */
+  transition: left 0.3s; /* Transição para a posição à esquerda */
+}
+
+/* Posição do botão de alternar tema para o tema claro */
+#theme-toggle-container.light #theme-toggle {
+  left: 55px; /* Posição à esquerda para o tema claro */
+}
+
+#theme-toggle ion-icon {
+  font-size: 24px; /* Tamanho do ícone */
+  color: var(--text-color); /* Cor do ícone */
+}
+
+/* Estilos para os links */
+.link {
+  border: 1px solid #ccc; /* Borda */
+  background-color: var(--surface-color); /* Cor de fundo */
+  padding: 8px; /* Espaçamento interno */
+  margin-bottom: 16px; /* Margem inferior */
+}
+
+.link a {
+  display: flex; /* Display flex para alinhar conteúdo */
+  align-items: center; /* Alinha verticalmente ao centro */
+  justify-content: center; /* Alinha horizontalmente ao centro */
+  padding: 16px 24px; /* Espaçamento interno */
+  background: rgba(255, 255, 255, 0.1); /* Fundo com transparência */
+  border: 1px solid var(--stroke-color); /* Borda */
+  border-radius: 8px; /* Borda arredondada */
+  backdrop-filter: blur(4px); /* Efeito de desfoque */
+  -webkit-backdrop-filter: blur(4px); /* Efeito de desfoque para Webkit */
+  text-decoration: none; /* Sem decoração de texto */
+  font-weight: 500; /* Peso da fonte */
+  transition: all 0.2s; /* Transições suaves */
+  color: var(--text-color); /* Cor do texto */
+}
+
+/* Ícone dentro do link */
+.link a ion-icon {
+  font-size: 24px; /* Tamanho do ícone */
+  margin-right: 8px; /* Margem à direita do ícone */
+  color: var(--text-color); /* Cor do ícone */
+}
+
+/* Efeito hover para o link */
+.link a:hover {
+  background: rgba(255, 255, 255, 0.5); /* Fundo com transparência no hover */
+  border: 1.5px solid var(--stroke-color-hover); /* Borda aumentada no hover */
+}
+
+/* Estilos para o tema claro nos links */
+.light .link a,
+.light .link a ion-icon {
+  color: black !important; /* Cor do texto e ícone para o tema claro */
+}
+
+/* Estilos para o rodapé */
+footer {
+  padding: 24px 0; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+}
