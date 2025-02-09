@@ -38,7 +38,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',  # Backend de templates do Django
-        'DIRS': [BASE_DIR / 'app/templates'],  # Diretórios de templates
+        'DIRS': [BASE_DIR / '../frontend/templates'],  # Diretórios de templates
         'APP_DIRS': True,  # Habilita a busca de templates nos diretórios dos aplicativos
         'OPTIONS': {
             'context_processors': [
@@ -87,7 +87,7 @@ USE_TZ = True  # Habilita o uso de fuso horário
 
 # Configurações de arquivos estáticos
 STATIC_URL = '/static/'  # URL para arquivos estáticos
-STATICFILES_DIRS = [BASE_DIR / 'app/static']  # Diretórios de arquivos estáticos
+STATICFILES_DIRS = [BASE_DIR / '../frontend/static']  # Diretórios de arquivos estáticos
 
 # Configurações de e-mail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Backend de e-mail SMTP

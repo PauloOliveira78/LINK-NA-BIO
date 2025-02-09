@@ -1,28 +1,23 @@
-# Alternador de Tema - Projeto Frontend
+# PSG_SOLUTIONS - Projeto Frontend com Futuro Backend
 
-Este projeto implementa um alternador de tema simples em uma página web, permitindo aos usuários mudar entre os modos claro e escuro com um clique. A implementação utiliza HTML, CSS e JavaScript para oferecer uma experiência dinâmica de mudança de estilo.
+Este projeto implementa um sistema de abertura de chamados, atualmente utilizando **EmailJS** para envio de e-mails e planejando uma futura migração para um backend em **Python** com banco de dados **MySQL**.
 
-## Funcionalidades
+## 🚀 Tecnologias Utilizadas
 
-- Alternância entre modo claro e escuro com transição suave.
-- Mudança dinâmica de estilos CSS conforme o tema selecionado.
+- **HTML, CSS e JavaScript** – Estrutura e funcionalidade do frontend.
+- **EmailJS** – Integração atual para envio de e-mails.
+- **GitHub Pages** – Hospedagem do frontend.
+- **Futuro Backend:** Planejamento para uso de **Python (Flask ou Django) e MySQL**.
 
-## Tecnologias Utilizadas
+## 📌 Roadmap do Projeto
 
-- **HTML:** Estrutura básica da página.
-- **CSS:** Estilos para os modos claro e escuro.
-- **JavaScript:** Funcionalidades de alternância de tema e manipulação do DOM.
-- **GitHub Pages:** Hospedagem do projeto para fácil acesso e compartilhamento.
+1. 🔹 Melhorar segurança e ocultar API Key (Em progresso ✅)
+2. 🔹 Planejar arquitetura da API para migração (Pendente ⏳)
+3. 🔹 Criar estrutura do banco de dados e endpoints (Futuro 🚀)
 
-## Como Usar
+## 👨‍💻 Como Contribuir
 
-1. Clone este repositório para sua máquina local.
-2. Abra o arquivo `index.html` em seu navegador.
-3. Clique no botão de alternância para mudar entre os temas.
-
-## Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para sugerir melhorias através de pull requests.
+Contribuições são bem-vindas! Entre em contato para sugestões e melhorias.
 
 ## Projeto Paralelo na Comunidade Rocketseat
 
@@ -31,4 +26,3 @@ Além deste projeto, também estou participando ativamente de iniciativas na com
 ## Autor
 
 - **Paulo Oliveira** - [@PauloOliveira78](https://github.com/PauloOliveira78)
-
